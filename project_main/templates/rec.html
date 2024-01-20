@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Cities</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='rec.css')}}">
+    <style>
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Select Cities to Visit</h2>
+  </body>
+    <form action="/process_cities" method="post">
+      {% for city in cities %}
+      <label>
+        <input type="checkbox" name="city" value="{{ city }}" /> {{ city }}
+      </label>
+      {% endfor %}
+
+      <button type="submit" formaction="/map">Submit for Map</button>
+      <button type="submit" formaction="/show">Submit for Graph</button>
+    </form>
+  
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{{url_for('static', filename='formstyle.css')}}">
+<h1>ENTER THE FORM </h1>
+<h2>Leave empty if no choice</h2>
+<div id="form-main">
+   
+    <div id="form-div">
+      <form class="form" id="form1" action="/recomendations" method="post">
+           
+      
+          <select name="budget" class="validate[required] feedback-input" id="bugdet">
+            <option value="">Budget of the trip</option>
+            <option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="expensive">Expensive</option>
+          </select>
+        
+          <select name="weather" class="validate[required] feedback-input" id="weather">
+            <option value="">Select Weather</option>
+            <option value="Hot">Hot</option>
+            <option value="Cold">Cool</option>
+            <option value="Moderate">Moderate</option>
+          </select>
+    
+          <input name="mindistance" type="number" class="feedback-input" id="distance" placeholder="Min Distance (in km)" value="" />
+
+<input name="maxdistance" type="number" class="feedback-input" id="distance" placeholder="Max Distance (in km)" value="" />
+
+          <input name="location" type="text" class="validate[required] feedback-input" id="location" placeholder="Your current location" />
+        
+        
+        <div class="submit">
+          <input type="submit" value="Get Reccomendations" id="button-blue"/>
+          <div class="ease"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+  </html>
+
+
+
+
+
+
+
+  
