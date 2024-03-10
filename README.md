@@ -1,2 +1,1 @@
-# DMS-PROJECT
-Trip advisory system
+# Trip advisory system
